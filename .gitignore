@@ -1,1 +1,6 @@
 misc/
+
+node_modules/
+
+package.json
+pnpm-lock.yaml
