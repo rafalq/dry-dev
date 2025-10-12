@@ -1,26 +1,4 @@
 @import "variables.css";
+@import "base.css";
+@import "layout.css";
 @import "footer.css";
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-
-body {
-  display: grid;
-  grid-template-rows: 60px 1fr 120px;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  min-height: 100vh;
-  font-family: var(--font-primary);
-
-  /* Dla kodu: JSON Formatter, API Response, Base64 */
-  code,
-  pre,
-  .code-block,
-  .json-output {
-    font-family: var(--font-mono);
-  }
-}
-
-.main-nav {
-  display: flex;
-}
