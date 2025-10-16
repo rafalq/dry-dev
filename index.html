@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Header & Navigation -->
-    <header class="header">
+    <header class="main-header">
       <nav role="navigation" aria-label="Main navigation" class="main-nav">
         <!-- Logo -->
         <div>Logo</div>
@@ -36,9 +36,15 @@
 
         <!-- Navigation Menu -->
         <div id="navbarMenu">
-          <ul>
+          <ul class="main-nav-links">
             <li>
               <a href="index.html" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="index.html" aria-current="page">Lorem</a>
+            </li>
+            <li>
+              <a href="index.html" aria-current="page">Lorem II</a>
             </li>
           </ul>
         </div>
@@ -51,21 +57,21 @@
     <!-- Footer -->
     <footer class="footer">
       <div>
-        <h4>DRY DEV</h4>
+        <h5>DRY DEV</h5>
         <p>
           Project created as part of Web Design Course 2025. All tools run 100%
           client-side.
         </p>
       </div>
-      <div>
-        <h4>Tools</h4>
+      <div class="flex gap-2">
+        <h5>Tools</h5>
         <ul>
           <li><a href="src/pages/api-tester.html">API Tester</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Info</h4>
-        <ul>
+      <div class="flex gap-2 items-center">
+        <h5>Info</h5>
+        <ul class="flex gap-2">
           <li><a href="#hero">About Project</a></li>
           <li><a href="#tools">All Tools</a></li>
           <li>
@@ -75,7 +81,6 @@
           </li>
         </ul>
       </div>
-
       <p>
         &copy; 2025 Dry Dev | Developer Tools Dashboard. Educational Project.
       </p>

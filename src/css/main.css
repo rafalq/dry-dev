@@ -1,4 +1,6 @@
-@import "variables.css";
-@import "base.css";
-@import "layout.css";
-@import "footer.css";
+@import "shared/variables.css";  
+@import "shared/reset.css";      
+@import "shared/base.css";       
+@import "shared/layout.css";     
+@import "shared/components.css"; 
+@import "shared/utils.css";      
