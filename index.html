@@ -15,6 +15,7 @@
 
     <title>Dry Dev | Tools for Web Developers</title>
     <link rel="stylesheet" href="src/css/main.css" />
+    <script type="module" src="src/js/main.js" defer></script>
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -23,19 +24,8 @@
         <!-- Logo -->
         <div>Logo</div>
 
-        <!-- Mobile Menu Toggle -->
-        <button
-          id="navbarToggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
         <!-- Navigation Menu -->
-        <div id="navbarMenu">
+        <div id="navMenu">
           <ul class="main-nav-links">
             <li>
               <a href="index.html" aria-current="page">Home</a>
@@ -48,8 +38,21 @@
             </li>
           </ul>
         </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
 
     <!-- Main Content -->
     <main class="main">MAIN</main>

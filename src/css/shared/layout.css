@@ -27,13 +27,6 @@ body {
   justify-content: space-between;
 }
 
-.main-nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-}
-
 .main {
   grid-area: main;
   padding: var(--space-8);
