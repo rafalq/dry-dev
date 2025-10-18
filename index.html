@@ -51,6 +51,7 @@
         </button>
       </nav>
     </header>
+
     <!-- Overlay for mobile -->
     <div class="overlay" id="overlay"></div>
 
@@ -59,34 +60,84 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div>
-        <h5>DRY DEV</h5>
-        <p>
-          Project created as part of Web Design Course 2025. All tools run 100%
-          client-side.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <h5>Tools</h5>
-        <ul>
-          <li><a href="src/pages/api-tester.html">API Tester</a></li>
-        </ul>
-      </div>
-      <div class="flex gap-2 items-center">
-        <h5>Info</h5>
-        <ul class="flex gap-2">
-          <li><a href="#hero">About Project</a></li>
-          <li><a href="#tools">All Tools</a></li>
-          <li>
-            <a href="https://github.com" target="_blank" rel="noopener"
-              >GitHub</a
+      <div class="footer-container">
+        <!-- Footer Main Content -->
+        <div class="footer-content">
+          <!-- Brand Section -->
+          <div class="footer-section footer-brand">
+            <h5>DRY DEV</h5>
+            <p>
+              Project created as part of Web Design Course 2025. All tools run
+              100% client-side for maximum privacy and performance.
+            </p>
+          </div>
+
+          <!-- Tools Links -->
+          <div class="footer-section">
+            <h5>Tools</h5>
+            <ul class="footer-links">
+              <li><a href="src/pages/api-tester.html">API Tester</a></li>
+              <li>
+                <a href="src/pages/json-formatter.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="src/pages/data-generator.html">Test Data Generator</a>
+              </li>
+              <li>
+                <a href="src/pages/base64.html">Base64 Encoder/Decoder</a>
+              </li>
+              <li><a href="src/pages/timestamp.html">Unix Timestamp</a></li>
+            </ul>
+          </div>
+
+          <!-- Info Links -->
+          <div class="footer-section">
+            <h5>Info</h5>
+            <ul class="footer-links">
+              <li><a href="#hero">About Project</a></li>
+              <li><a href="#tools">All Tools</a></li>
+              <li><a href="#features">Features</a></li>
+              <li>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub Repository
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2025 Dry Dev | Developer Tools Dashboard. Educational
+            Project.
+          </p>
+
+          <div class="footer-social">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
             >
-          </li>
-        </ul>
+              GH
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              IN
+            </a>
+            <a href="mailto:contact@drydev.com" aria-label="Email"> @ </a>
+          </div>
+        </div>
       </div>
-      <p>
-        &copy; 2025 Dry Dev | Developer Tools Dashboard. Educational Project.
-      </p>
     </footer>
   </body>
 </html>

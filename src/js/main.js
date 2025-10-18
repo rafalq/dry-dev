@@ -2,4 +2,4 @@
 // imports all module scripts
 
 // Navigation module
-import './navigation.js';
+import './shared/navigation.js';
