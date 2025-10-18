@@ -2,29 +2,25 @@
 
 .link-animated {
   color: var(--text-secondary);
-  transition: var(--transition-colors);
   display: inline-block;
   position: relative;
   text-decoration: none;
-}
-
-.link-animated::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: var(--color-primary);
-  transition: width var(--duration-base) var(--ease-out);
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary) 100%
+  );
+  background-size: 0 2px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition:
+    background-size var(--duration-base) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
 }
 
 .link-animated:hover {
   color: var(--color-primary);
-}
-
-.link-animated:hover::after {
-  width: 100%;
+  background-size: 100% 2px;
 }
 
 .link-animated:focus {
@@ -37,23 +33,22 @@
 .link-animated[aria-current="page"] {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
-}
-
-.link-animated[aria-current="page"]::after {
-  width: 100%;
+  background-size: 100% 2px;
 }
 
 /* Variant: Light text (for dark backgrounds) */
 .link-animated-light {
   color: var(--text-inverse);
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light) 0%,
+    var(--color-primary-light) 100%
+  );
 }
 
 .link-animated-light:hover {
   color: var(--color-primary-light);
-}
-
-.link-animated-light::after {
-  background-color: var(--color-primary-light);
+  background-size: 100% 2px;
 }
 
 /* ========== BUTTONS ========== */

@@ -14,6 +14,7 @@
     />
 
     <title>Dry Dev | Tools for Web Developers</title>
+    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
     <link rel="stylesheet" href="src/css/main.css" />
     <script type="module" src="src/js/main.js" defer></script>
   </head>
@@ -129,25 +130,27 @@
                 <span class="code-function">testAPI</span> =
                 <span class="code-keyword">async</span> () => {</code
               >
-              <code class="code-line">
-                <span class="code-keyword">&nbsp;&nbsp;const</span> response =
-                <span class="code-keyword">await</span>
-                <span class="code-function">fetch</span>(<span
-                  class="code-string"
-                  >'api/data'</span
-                >);</code
-              >
-              <code class="code-line">
-                <span class="code-keyword">&nbsp;&nbsp;const</span> json =
-                <span class="code-keyword">await</span> response.<span
-                  class="code-function"
-                  >json</span
-                >();</code
-              >
-              <code class="code-line">
-                <span class="code-keyword">&nbsp;&nbsp;return</span>
-                <span class="code-function">formatJSON</span>(json);</code
-              >
+              <div class="code-line-nested">
+                <code class="code-line">
+                  <span class="code-keyword">const</span> response =
+                  <span class="code-keyword">await</span>
+                  <span class="code-function">fetch</span>(<span
+                    class="code-string"
+                    >'api/data'</span
+                  >);</code
+                >
+                <code class="code-line">
+                  <span class="code-keyword">const</span> json =
+                  <span class="code-keyword">await</span> response.<span
+                    class="code-function"
+                    >json</span
+                  >();</code
+                >
+                <code class="code-line">
+                  <span class="code-keyword">return</span>
+                  <span class="code-function">formatJSON</span>(json);</code
+                >
+              </div>
               <code class="code-line">};</code>
               <code class="code-line"
                 ><span class="code-comment"

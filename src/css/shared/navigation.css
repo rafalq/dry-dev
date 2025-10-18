@@ -30,7 +30,6 @@
 }
 
 .main-nav-links a {
-  /* Używamy klasy .link-animated z components.css */
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   padding: var(--space-2) 0;
@@ -58,7 +57,7 @@
 
 #navToggle:focus {
   outline: 2px solid var(--color-primary);
-  outline-offset: 4px;
+  outline-offset: 6px;
   border-radius: var(--radius-sm);
 }
 
@@ -112,6 +111,8 @@
 @media (max-width: 768px) {
   #navToggle {
     display: flex;
+    position: relative;
+    z-index: calc(var(--z-modal) + 1);
   }
 
   #navMenu {

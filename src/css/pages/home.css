@@ -181,6 +181,10 @@
   color: #cbd5e1;
 }
 
+.code-line-nested {
+  margin-left: var(--space-4);
+}
+
 .code-line {
   display: block;
   animation: typeIn 0.5s ease-out;
