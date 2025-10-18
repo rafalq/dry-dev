@@ -22,19 +22,28 @@
     <header class="main-header">
       <nav role="navigation" aria-label="Main navigation" class="main-nav">
         <!-- Logo -->
-        <div>Logo</div>
+        <div>
+          <a href="index.html" class="logo">
+            <strong>DRY DEV</strong>
+          </a>
+        </div>
 
         <!-- Navigation Menu -->
         <div id="navMenu">
           <ul class="main-nav-links">
             <li>
-              <a href="index.html" aria-current="page">Home</a>
+              <a href="index.html" class="link-animated" aria-current="page"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="index.html" aria-current="page">Lorem</a>
+              <a href="src/pages/tools.html" class="link-animated">Tools</a>
             </li>
             <li>
-              <a href="index.html" aria-current="page">Lorem II</a>
+              <a href="src/pages/about.html" class="link-animated">About</a>
+            </li>
+            <li>
+              <a href="src/pages/docs.html" class="link-animated">Docs</a>
             </li>
           </ul>
         </div>
@@ -56,7 +65,95 @@
     <div class="overlay" id="overlay"></div>
 
     <!-- Main Content -->
-    <main class="main">MAIN</main>
+    <main class="main">
+      <section class="hero" id="hero">
+        <div class="hero-container">
+          <!-- Hero Content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              <span>100% Client-Side Tools</span>
+            </div>
+
+            <h1 class="hero-title">
+              Developer Tools <br />
+              <span class="hero-title-gradient">Made Simple</span>
+            </h1>
+
+            <p class="hero-description">
+              Professional web developer toolkit running entirely in your
+              browser. No backend, no data uploads, complete privacy guaranteed.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#tools" class="btn btn-primary"> Explore Tools </a>
+              <a href="#features" class="btn btn-outline"> Learn More </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">7+</span>
+                <span class="stat-label">Developer Tools</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Privacy First</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">0ms</span>
+                <span class="stat-label">Server Latency</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual (Code Window) -->
+          <div class="hero-visual">
+            <div class="code-header">
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+            </div>
+            <div class="code-content">
+              <code class="code-line"
+                ><span class="code-comment"
+                  >// API Testing Made Easy</span
+                ></code
+              >
+              <code class="code-line"
+                ><span class="code-keyword">const</span>
+                <span class="code-function">testAPI</span> =
+                <span class="code-keyword">async</span> () => {</code
+              >
+              <code class="code-line">
+                <span class="code-keyword">const</span> response =
+                <span class="code-keyword">await</span>
+                <span class="code-function">fetch</span>(<span
+                  class="code-string"
+                  >'api/data'</span
+                >);</code
+              >
+              <code class="code-line">
+                <span class="code-keyword">const</span> json =
+                <span class="code-keyword">await</span> response.<span
+                  class="code-function"
+                  >json</span
+                >();</code
+              >
+              <code class="code-line">
+                <span class="code-keyword">return</span>
+                <span class="code-function">formatJSON</span>(json);</code
+              >
+              <code class="code-line">};</code>
+              <code class="code-line"
+                ><span class="code-comment"
+                  >// Fast, secure, offline-ready ✨</span
+                ></code
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

@@ -1,7 +1,7 @@
 /* Page layout structure */
 body {
   display: grid;
-  grid-template-rows: var(--size-header) 1fr auto;
+  grid-template-rows: var(--size-header) auto auto;
   grid-template-areas:
     "header"
     "main"
@@ -14,8 +14,8 @@ body {
   grid-area: header;
 
   background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-primary);
   padding: 0 var(--space-6);
+  border-bottom: 1px solid var(--border-primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +31,6 @@ body {
 
 .main {
   grid-area: main;
-  padding: var(--space-8);
   overflow-y: auto;
 }
 
