@@ -1,7 +1,3 @@
-/* ============================================
-   FOOTER STYLES
-   ============================================ */
-
 .footer {
   background: var(--bg-primary);
   padding: var(--space-12) var(--space-6) var(--space-6);
@@ -42,36 +38,8 @@
 }
 
 .footer-links li a {
+  /* Używamy klasy .link-animated z components.css */
   font-size: var(--font-size-sm);
-  color: var(--text-secondary);
-  transition: var(--transition-colors);
-  display: inline-block;
-  position: relative;
-}
-
-.footer-links li a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: var(--color-primary);
-  transition: width var(--duration-base) var(--ease-out);
-}
-
-.footer-links li a:hover {
-  color: var(--color-primary);
-}
-
-.footer-links li a:hover::after {
-  width: 100%;
-}
-
-.footer-links li a:focus {
-  outline: 2px solid var(--border-focus);
-  outline-offset: 4px;
-  border-radius: var(--radius-sm);
 }
 
 .footer-bottom {
