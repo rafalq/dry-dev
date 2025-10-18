@@ -1,10 +1,20 @@
 /* Logo */
 .logo {
-  font-size: var(--font-size-xl);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   letter-spacing: var(--letter-spacing-tight);
   transition: var(--transition-colors);
+  text-decoration: none;
+  font-family: var(--font-mono);
+}
+
+.logo-brackets,
+.logo-slash {
+  color: var(--color-primary-lighter);
 }
 
 .logo:hover {

@@ -24,7 +24,12 @@
         <!-- Logo -->
         <div>
           <a href="index.html" class="logo">
-            <strong>🛠️ DRY DEV</strong>
+            <strong
+              ><span class="logo-brackets">&lt;</span>DRY<span
+                class="logo-slash"
+                >/</span
+              >DEV<span class="logo-brackets">&gt;</span></strong
+            >
           </a>
         </div>
 
@@ -125,7 +130,7 @@
                 <span class="code-keyword">async</span> () => {</code
               >
               <code class="code-line">
-                <span class="code-keyword">const</span> response =
+                <span class="code-keyword">&nbsp;&nbsp;const</span> response =
                 <span class="code-keyword">await</span>
                 <span class="code-function">fetch</span>(<span
                   class="code-string"
@@ -133,14 +138,14 @@
                 >);</code
               >
               <code class="code-line">
-                <span class="code-keyword">const</span> json =
+                <span class="code-keyword">&nbsp;&nbsp;const</span> json =
                 <span class="code-keyword">await</span> response.<span
                   class="code-function"
                   >json</span
                 >();</code
               >
               <code class="code-line">
-                <span class="code-keyword">return</span>
+                <span class="code-keyword">&nbsp;&nbsp;return</span>
                 <span class="code-function">formatJSON</span>(json);</code
               >
               <code class="code-line">};</code>
