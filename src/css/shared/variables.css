@@ -9,6 +9,8 @@
 
   /* Primary Brand Colors */
   --color-primary: #6366f1;
+  --color-primary-900: #6366f11a;
+  --color-primary-800: #6366f133;
   --color-primary-dark: #4f46e5;
   --color-primary-light: #818cf8;
   --color-primary-lighter: #a5b4fc;
