@@ -289,6 +289,109 @@
           </div>
         </div>
       </section>
+      <!-- RECENTLY USED -->
+      <!-- Recently Used Section -->
+      <section class="recently-used-section">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            <span>Recently Used</span>
+          </div>
+          <h2 class="section-title">Your Recent Activity</h2>
+          <p class="section-description">
+            Quick access to your recently used tools and saved data.
+          </p>
+        </div>
+
+        <div class="recent-items-container">
+          <!-- Empty state (shows when no recent activity) -->
+          <div class="empty-state" id="emptyState">
+            <div class="empty-icon">📋</div>
+            <h3 class="empty-title">No Recent Activity</h3>
+            <p class="empty-description">
+              Start using tools to see your recent activity here. Your history
+              is saved locally in your browser.
+            </p>
+            <a href="#tools" class="btn-explore">Explore Tools</a>
+          </div>
+
+          <!-- Recent items list (populated by JavaScript) -->
+          <div
+            class="recent-items-list"
+            id="recentItemsList"
+            style="display: none"
+          >
+            <!-- Sample items for demonstration -->
+            <div class="recent-item">
+              <div class="recent-item-icon api-tester">&lt;/&gt;</div>
+              <div class="recent-item-content">
+                <h4 class="recent-item-title">API Tester</h4>
+                <p class="recent-item-description">POST request to api/users</p>
+                <span class="recent-item-time">2 minutes ago</span>
+              </div>
+              <a href="src/pages/api-tester.html" class="recent-item-button"
+                >Open</a
+              >
+            </div>
+
+            <div class="recent-item">
+              <div class="recent-item-icon json-formatter">{ }</div>
+              <div class="recent-item-content">
+                <h4 class="recent-item-title">JSON Formatter</h4>
+                <p class="recent-item-description">Validated 1845 characters</p>
+                <span class="recent-item-time">1 hour ago</span>
+              </div>
+              <a href="src/pages/json-formatter.html" class="recent-item-button"
+                >Open</a
+              >
+            </div>
+
+            <div class="recent-item">
+              <div class="recent-item-icon data-generator">⚡</div>
+              <div class="recent-item-content">
+                <h4 class="recent-item-title">Test Data Generator</h4>
+                <p class="recent-item-description">
+                  Generated 50 user profiles
+                </p>
+                <span class="recent-item-time">3 hours ago</span>
+              </div>
+              <a href="src/pages/data-generator.html" class="recent-item-button"
+                >Open</a
+              >
+            </div>
+
+            <div class="recent-item">
+              <div class="recent-item-icon base64">64</div>
+              <div class="recent-item-content">
+                <h4 class="recent-item-title">Base64 Encoder</h4>
+                <p class="recent-item-description">Encoded text string</p>
+                <span class="recent-item-time">5 hours ago</span>
+              </div>
+              <a href="src/pages/base64.html" class="recent-item-button"
+                >Open</a
+              >
+            </div>
+
+            <div class="recent-item">
+              <div class="recent-item-icon timestamp">🕐</div>
+              <div class="recent-item-content">
+                <h4 class="recent-item-title">Unix Timestamp</h4>
+                <p class="recent-item-description">Converted current time</p>
+                <span class="recent-item-time">1 day ago</span>
+              </div>
+              <a href="src/pages/timestamp.html" class="recent-item-button"
+                >Open</a
+              >
+            </div>
+          </div>
+
+          <div class="recent-actions" id="recentActions" style="display: none">
+            <button class="btn-clear-history" id="clearHistoryBtn">
+              Clear History
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
