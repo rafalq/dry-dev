@@ -6,8 +6,10 @@
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
+  padding: 0;
 }
 
 a {
@@ -15,11 +17,18 @@ a {
   color: inherit;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }

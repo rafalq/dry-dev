@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="../../css/pages/tools/index.css" />
     <script type="module" src="../../js/main.js" defer></script>
+    <script type="module" src="../../js/tools/search.js" defer></script>
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -117,10 +118,10 @@
                   🔐 Encoders
                 </button>
                 <button class="filter-chip" data-category="converters">
-                  ⏱️ Converters
+                  ♻️ Converters
                 </button>
                 <button class="filter-chip" data-category="utilities">
-                  🎨 Utilities
+                  ⚙️ Utilities
                 </button>
               </div>
             </div>
@@ -137,7 +138,7 @@
             <article class="tool-card" data-tags="api test request http">             
               <div class="tool-card-header">
                 <div class="tool-card-category-box">
-                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>API Tools<h6/>
+                  <h6 class="tool-card-category-title">API Tools <span class="tool-card-category-icon">🔌</span><h6/>
                 </div>
                 <div class="tool-card-title">
                   <span class="tool-icon"><i data-lucide="terminal"></i></span>
@@ -155,8 +156,8 @@
                 </div>
                 <a
                   href="api-tester.html"
-                  class="open-tool-btn btn btn-primary btn-sm"
-                  >Open Tool 🔓</a
+                  class="tool-button open-tool-btn btn-sm"
+                  >Launch Tool</a
                 >
               </div>
             </article>
@@ -171,7 +172,7 @@
             <article class="tool-card" data-tags="json validation parser data">
               <div class="tool-card-header">
                 <div class="tool-card-category-box">
-                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Formatters<h6/>
+                  <h6 class="tool-card-category-title">Formatters <span class="tool-card-category-icon">📋</span><h6/>
                 </div>
                 <div class="tool-card-title">
                   <span class="tool-icon"><i data-lucide="braces"></i></span>
@@ -189,8 +190,8 @@
                 </div>
                 <a
                   href="api-tester.html"
-                  class="open-tool-btn btn btn-primary btn-sm"
-                  >Open Tool 🔓</a
+                  class="tool-button open-tool-btn btn-sm"
+                  >Launch Tool</a
                 >
               </div>
             </article>
@@ -205,7 +206,7 @@
             >
               <div class="tool-card-header">
                 <div class="tool-card-category-box">
-                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Formatters<h6/>
+                  <h6 class="tool-card-category-title"></i>Generators<span class="tool-card-category-icon">🎲</span><h6/>
                 </div>
                 <div class="tool-card-title">
                   <span class="tool-icon"
@@ -225,8 +226,8 @@
                 </div>
                 <a
                   href="api-tester.html"
-                  class="open-tool-btn btn btn-primary btn-sm"
-                  >Open Tool 🔓</a
+                  class="tool-button open-tool-btn btn-sm"
+                  >Launch Tool</a
                 >
               </div>
             </article>            
@@ -241,7 +242,7 @@
             >
               <div class="tool-card-header">
                 <div class="tool-card-category-box">
-                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Encoders & Decoders<h6/>
+                  <h6 class="tool-card-category-title">Encoders & Decoders<span class="tool-card-category-icon">🔐</span><h6/>
                 </div>
                 <div class="tool-card-title">
                   <span class="tool-icon"><i data-lucide="lock"></i></span>
@@ -259,8 +260,8 @@
                 </div>
                 <a
                   href="api-tester.html"
-                  class="open-tool-btn btn btn-primary btn-sm"
-                  >Open Tool 🔓</a
+                  class="tool-button open-tool-btn btn-sm"
+                  >Launch Tool</a
                 >
               </div>
             </article>           
@@ -275,7 +276,7 @@
             >
               <div class="tool-card-header">
                 <div class="tool-card-category-box">
-                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Converters<h6/>
+                  <h6 class="tool-card-category-title">Converters<span class="tool-card-category-icon">♻️</span><h6/>
                 </div>
                 <div class="tool-card-title">
                   <span class="tool-icon"><i data-lucide="clock"></i></span>
@@ -293,8 +294,8 @@
                 </div>
                 <a
                   href="api-tester.html"
-                  class="open-tool-btn btn btn-primary btn-sm"
-                  >Open Tool 🔓</a
+                 class="tool-button open-tool-btn btn-sm"
+                  >Launch Tool</a
                 >
               </div>
             </article>
@@ -309,7 +310,7 @@
             >
               <div class="tool-card-header">
                 <div class="tool-card-category-box">
-                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Utilities<h6/>
+                  <h6 class="tool-card-category-title">Utilities<span class="tool-card-category-icon">⚙️</span><h6/>
                 </div>
                 <div class="tool-card-title">
                   <span class="tool-icon"><i data-lucide="palette"></i></span>
@@ -327,8 +328,8 @@
                 </div>
                 <a
                   href="api-tester.html"
-                  class="open-tool-btn btn btn-primary btn-sm"
-                  >Open Tool 🔓</a
+                  class="tool-button open-tool-btn btn-sm"
+                  >Launch Tool</a
                 >
               </div>
             </article>
@@ -340,10 +341,10 @@
               <span class="empty-icon">🔍</span>
               <h3 class="empty-title">No tools found</h3>
               <p class="empty-description">
-                Try adjusting your search or filter criteria
+                Try adjusting your search or 
               </p>
-              <button class="btn btn-primary" onclick="resetFilters()">
-                Clear Filters
+              <button class="btn btn-primary" onclick="clearSearch()">
+                Clear Search
               </button>
             </div>
           </div>

@@ -68,6 +68,40 @@
   --color-info-light: rgb(219, 234, 254);
   --color-info-dark: rgb(37, 99, 235);
 
+  --color-highlight-100: rgb(254, 240, 138);
+  --color-highlight-200: rgb(253, 224, 71);
+  --color-highlight-300: rgb(250, 204, 21);
+  --color-highlight-dark: rgba(234, 179, 8, 0.2);
+
+  --color-brown: rgb(133, 77, 14);
+  --color-brown-dark: --color-brown-dark: rgb(69, 26, 3);
+
+  /* ========== ADDITIONAL BLUE SHADES (for search components) ========== */
+  --color-blue-50: rgb(240, 249, 255); /* #f0f9ff */
+  --color-blue-100: rgb(224, 242, 254); /* #e0f2fe */
+  --color-blue-200: rgb(186, 230, 253); /* #bae6fd */
+  --color-blue-300: rgb(125, 211, 252); /* #7dd3fc */
+  --color-blue-400: rgb(56, 189, 248); /* #38bdf8 */
+  --color-blue-500: rgb(14, 165, 233); /* #0ea5e9 */
+  --color-blue-600: rgb(2, 132, 199); /* #0284c7 */
+  --color-blue-700: rgb(3, 105, 161); /* #0369a1 */
+  --color-blue-800: rgb(7, 89, 133); /* #075985 */
+  --color-blue-900: rgb(12, 74, 110); /* #0c4a6e */
+  --color-blue-950: rgb(8, 47, 73); /* #082f49 */
+
+  /* ========== ADDITIONAL BLUE SHADES - DARK (for dark mode) ========== */
+  --color-blue-dark-50: rgb(191, 219, 254); /* #bfdbfe */
+  --color-blue-dark-100: rgb(219, 234, 254); /* #dbeafe */
+  --color-blue-dark-700: rgb(30, 58, 95); /* #1e3a5f */
+  --color-blue-dark-800: rgb(30, 64, 175); /* #1e40af */
+
+  /* ========== ADDITIONAL YELLOW/AMBER SHADES (for highlights) ========== */
+  --color-amber-400: rgb(251, 191, 36); /* #fbbf24 */
+
+  /* ========== UTILITY COLORS ========== */
+  --color-white-alpha-80: rgba(255, 255, 255, 0.8);
+  --color-yellow-vivid: yellow;
+
   /* Background Colors */
   --bg-primary: var(--color-white);
   --bg-secondary: var(--color-gray-50);
@@ -104,6 +138,7 @@
   --font-mono: "JetBrains Mono", monospace;
 
   /* Font Sizes */
+  --font-size-xxxs: 0.25rem; /* 4px */
   --font-size-xxs: 0.5rem; /* 8px */
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.875rem; /* 14px */

@@ -1,3 +1,5 @@
+@import "./search.css";
+
 .tools-section {
   display: flex;
   justify-content: center;
@@ -130,13 +132,15 @@
   margin-left: auto;
   text-transform: uppercase;
   color: var(--color-gray-500);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   display: flex;
   align-items: flex-start;
 }
 
 .tool-card-category-icon {
-  height: var(--space-3);
+  color: var(--color-gray-400);
+  filter: grayscale(100%);
+  margin-left: var(--space-1);
 }
 
 .tool-card-title {

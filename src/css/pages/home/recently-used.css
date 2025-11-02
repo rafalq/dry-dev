@@ -23,7 +23,7 @@
 .empty-title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-gray-900);
+  color: var(--color-gray-500);
   margin-bottom: var(--space-3);
 }
 
