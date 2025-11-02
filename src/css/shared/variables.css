@@ -8,62 +8,65 @@
   /* ========== COLORS ========== */
 
   /* Primary Brand Colors */
-  --color-primary: #6366f1;
-  --color-primary-900: #6366f11a;
-  --color-primary-800: #6366f133;
-  --color-primary-dark: #4f46e5;
-  --color-primary-light: #818cf8;
-  --color-primary-lighter: #a5b4fc;
+  --color-primary: rgb(99, 102, 241);
+  --color-primary-900: rgba(99, 102, 241, 0.102);
+  --color-primary-800: rgba(99, 102, 241, 0.2);
+  --color-primary-700: rgba(99, 102, 241, 0.3);
+  --color-primary-dark: rgb(79, 70, 229);
+  --color-primary-light: rgb(129, 140, 248);
+  --color-primary-lighter: rgb(165, 180, 252);
+  --color-primary-x-lighter: rgb(218, 224, 255);
 
   /* Secondary Colors */
-  --color-secondary: #8b5cf6;
-  --color-secondary-dark: #7c3aed;
-  --color-secondary-light: #a78bfa;
+  --color-secondary: rgb(139, 92, 246);
+  --color-secondary-dark: rgb(124, 58, 237);
+  --color-secondary-light: rgb(167, 139, 250);
 
   /* Accent Colors */
-  --color-accent: #10b981;
-  --color-accent-dark: #059669;
-  --color-accent-light: #34d399;
+  --color-accent: rgb(16, 185, 129);
+  --color-accent-800: rgba(16, 185, 129, 0.2);
+  --color-accent-dark: rgb(5, 150, 105);
+  --color-accent-light: rgb(52, 211, 153);
 
   /* Neutral Colors - Light Mode */
-  --color-white: #ffffff;
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  --color-black: #000000;
+  --color-white: rgb(255, 255, 255);
+  --color-gray-50: rgb(249, 250, 251);
+  --color-gray-100: rgb(243, 244, 246);
+  --color-gray-200: rgb(229, 231, 235);
+  --color-gray-300: rgb(209, 213, 219);
+  --color-gray-400: rgb(156, 163, 175);
+  --color-gray-500: rgb(107, 114, 128);
+  --color-gray-600: rgb(75, 85, 99);
+  --color-gray-700: rgb(55, 65, 81);
+  --color-gray-800: rgb(31, 41, 55);
+  --color-gray-900: rgb(17, 24, 39);
+  --color-black: rgb(0, 0, 0);
 
   /* Dark Mode Colors */
-  --color-dark-bg: #0f172a;
-  --color-dark-bg-secondary: #1e293b;
-  --color-dark-bg-tertiary: #334155;
-  --color-dark-surface: #1e293b;
-  --color-dark-border: #334155;
-  --color-dark-text: #e2e8f0;
-  --color-dark-text-secondary: #cbd5e1;
+  --color-dark-bg: rgb(15, 23, 42);
+  --color-dark-bg-secondary: rgb(30, 41, 59);
+  --color-dark-bg-tertiary: rgb(51, 65, 85);
+  --color-dark-surface: rgb(30, 41, 59);
+  --color-dark-border: rgb(51, 65, 85);
+  --color-dark-text: rgb(226, 232, 240);
+  --color-dark-text-secondary: rgb(203, 213, 225);
 
   /* Semantic Colors */
-  --color-success: #10b981;
-  --color-success-light: #d1fae5;
-  --color-success-dark: #047857;
+  --color-success: rgb(16, 185, 129);
+  --color-success-light: rgb(209, 250, 229);
+  --color-success-dark: rgb(4, 120, 87);
 
-  --color-warning: #f59e0b;
-  --color-warning-light: #fef3c7;
-  --color-warning-dark: #d97706;
+  --color-warning: rgb(245, 158, 11);
+  --color-warning-light: rgb(254, 243, 199);
+  --color-warning-dark: rgb(217, 119, 6);
 
-  --color-error: #ef4444;
-  --color-error-light: #fee2e2;
-  --color-error-dark: #dc2626;
+  --color-error: rgb(239, 68, 68);
+  --color-error-light: rgb(254, 226, 226);
+  --color-error-dark: rgb(220, 38, 38);
 
-  --color-info: #3b82f6;
-  --color-info-light: #dbeafe;
-  --color-info-dark: #2563eb;
+  --color-info: rgb(59, 130, 246);
+  --color-info-light: rgb(219, 234, 254);
+  --color-info-dark: rgb(37, 99, 235);
 
   /* Background Colors */
   --bg-primary: var(--color-white);

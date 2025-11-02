@@ -1,3 +1,4 @@
+@import "bootstrap/bootstrap.min.css";
 @import "shared/variables.css";
 @import "shared/reset.css";
 @import "shared/base.css";
@@ -6,4 +7,4 @@
 @import "shared/navigation.css";
 @import "shared/footer.css";
 @import "shared/utils.css";
-@import "pages/home/index.css";
+@import "shared/tools.css";

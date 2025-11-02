@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional developer tools dashboard - API Tester, JSON Formatter, Data Generator and more."
+    />
+    <meta name="author" content="Rafal Kruszewski" />
+    <meta
+      name="keywords"
+      content="developer tools, api tester, web development"
+    />
+
+    <title>Dry Dev | Tools for Web Developers</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/pages/tools/index.css" />
+    <script type="module" src="../../js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="main-header">
+      <nav role="navigation" aria-label="Main navigation" class="main-nav">
+        <!-- Logo -->
+        <div>
+          <a href="index.html" class="logo">
+            <strong
+              ><span class="logo-brackets">&lt;</span>DRY<span
+                class="logo-slash"
+                >/</span
+              >DEV<span class="logo-brackets">&gt;</span></strong
+            >
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div id="navMenu">
+          <ul class="main-nav-links">
+            <li>
+              <a href="index.html" class="link-animated" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="src/pages/tools/index.html" class="link-animated"
+                >Tools</a
+              >
+            </li>
+            <li>
+              <a href="src/pages/about.html" class="link-animated">About</a>
+            </li>
+            <li>
+              <a href="src/pages/docs.html" class="link-animated">Docs</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+
+    <main class="container">
+      <div class="page-main">
+        <!-- Page Header -->
+        <section class="section-header">
+          <div class="row gy-4">
+            <div>
+              <h1 class="section-title">Developer Tools</h1>
+              <p class="section-description">
+                Powerful utilities to streamline your development workflow
+              </p>
+            </div>
+            <!-- Search Bar -->
+            <div class="row gy-3">
+              <div class="tools-search col-12 col-md-8 mx-auto">
+                <input
+                  type="search"
+                  id="toolSearch"
+                  class="input input-lg"
+                  placeholder="Search tools... (e.g., JSON, API, encode)"
+                  aria-label="Search tools"
+                />
+              </div>
+
+              <!-- Filter Chips -->
+              <div class="filter-chips-container col-12 mx-auto">
+                <button class="filter-chip active" data-category="all">
+                  All Tools
+                </button>
+                <button class="filter-chip" data-category="api">
+                  🔌 API Tools
+                </button>
+                <button class="filter-chip" data-category="formatters">
+                  📋 Formatters
+                </button>
+                <button class="filter-chip" data-category="generators">
+                  🎲 Generators
+                </button>
+                <button class="filter-chip" data-category="encoders">
+                  🔐 Encoders
+                </button>
+                <button class="filter-chip" data-category="converters">
+                  ⏱️ Converters
+                </button>
+                <button class="filter-chip" data-category="utilities">
+                  🎨 Utilities
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tools Grid -->
+        <section>
+          <div class="row gy-4 tools-section">
+
+          <!-- API Tools -->
+
+          <div class="col-12 col-md-5" data-category="api">
+            <article class="tool-card" data-tags="api test request http">             
+              <div class="tool-card-header">
+                <div class="tool-card-category-box">
+                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>API Tools<h6/>
+                </div>
+                <div class="tool-card-title">
+                  <span class="tool-icon"><i data-lucide="terminal"></i></span>
+                  <h4>API Tester</h4>
+                </div>
+              </div>
+              <p class="tool-card-description">
+                Test REST APIs with custom headers, request body, and view
+                formatted responses. Save requests to collections.
+              </p>
+              <div class="tool-card-footer">
+                <div class="tool-tags">
+                  <span class="badge badge-info">REST</span>
+                  <span class="badge badge-info">HTTP</span>
+                </div>
+                <a
+                  href="api-tester.html"
+                  class="open-tool-btn btn btn-primary btn-sm"
+                  >Open Tool 🔓</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Formatters -->
+
+          <div
+            class="col-12 col-md-5"
+            data-category="formatters"
+          >
+            <article class="tool-card" data-tags="json validation parser data">
+              <div class="tool-card-header">
+                <div class="tool-card-category-box">
+                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Formatters<h6/>
+                </div>
+                <div class="tool-card-title">
+                  <span class="tool-icon"><i data-lucide="braces"></i></span>
+                  <h4>JSON Formatter</h4>
+                </div>
+              </div>
+              <p class="tool-card-description">
+                Format, validate, and minify JSON data. Display syntax errors
+                with line numbers.
+              </p>
+              <div class="tool-card-footer">
+                <div class="tool-tags">
+                  <span class="badge badge-info">JSON</span>
+                  <span class="badge badge-info">Validation</span>
+                </div>
+                <a
+                  href="api-tester.html"
+                  class="open-tool-btn btn btn-primary btn-sm"
+                  >Open Tool 🔓</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Generators -->
+
+          <div class="col-12 col-md-5" data-category="generators">
+            <article
+              class="tool-card"
+              data-tags="generate data fake mock user"
+            >
+              <div class="tool-card-header">
+                <div class="tool-card-category-box">
+                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Formatters<h6/>
+                </div>
+                <div class="tool-card-title">
+                  <span class="tool-icon"
+                    ><i data-lucide="database"></i
+                  ></span>
+                  <h4>Test Data Generator</h4>
+                </div>
+              </div>
+              <p class="tool-card-description">
+                Generate realistic test data including users, products, and
+                custom datasets for testing.
+              </p>
+              <div class="tool-card-footer">
+                <div class="tool-tags">
+                  <span class="badge badge-info">Mock Data</span>
+                  <span class="badge badge-info">Testing</span>
+                </div>
+                <a
+                  href="api-tester.html"
+                  class="open-tool-btn btn btn-primary btn-sm"
+                  >Open Tool 🔓</a
+                >
+              </div>
+            </article>            
+          </div>
+
+          <!-- Encoders -->
+
+          <div class="col-12 col-md-5" data-category="encoders">            
+            <article
+              class="tool-card"
+              data-tags="base64 encode decode convert"
+            >
+              <div class="tool-card-header">
+                <div class="tool-card-category-box">
+                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Encoders & Decoders<h6/>
+                </div>
+                <div class="tool-card-title">
+                  <span class="tool-icon"><i data-lucide="lock"></i></span>
+                  <h4>Base64 Encoder/Decoder</h4>
+                </div>
+              </div>
+              <p class="tool-card-description">
+                Encode text to Base64 or decode Base64 strings back to
+                readable text instantly.
+              </p>
+              <div class="tool-card-footer">
+                <div class="tool-tags">
+                  <span class="badge badge-info">Base64</span>
+                  <span class="badge badge-info">Encoding</span>
+                </div>
+                <a
+                  href="api-tester.html"
+                  class="open-tool-btn btn btn-primary btn-sm"
+                  >Open Tool 🔓</a
+                >
+              </div>
+            </article>           
+          </div>
+
+          <!-- Converters -->
+
+          <div class="col-12 col-md-5" data-category="converters">
+            <article
+              class="tool-card"
+              data-tags="timestamp unix date time convert"
+            >
+              <div class="tool-card-header">
+                <div class="tool-card-category-box">
+                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Converters<h6/>
+                </div>
+                <div class="tool-card-title">
+                  <span class="tool-icon"><i data-lucide="clock"></i></span>
+                  <h4>Unix Timestamp Converter</h4>
+                </div>
+              </div>
+              <p class="tool-card-description">
+                Convert between Unix timestamps and human-readable dates in
+                multiple formats and timezones.
+              </p>
+              <div class="tool-card-footer">
+                <div class="tool-tags">
+                  <span class="badge badge-info">Timestamp</span>
+                  <span class="badge badge-info">DateTime</span>
+                </div>
+                <a
+                  href="api-tester.html"
+                  class="open-tool-btn btn btn-primary btn-sm"
+                  >Open Tool 🔓</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Utilities -->
+
+          <div class="col-12 col-md-5" data-category="utilities">
+            <article
+              class="tool-card"
+              data-tags="color picker hex rgb hsl"
+            >
+              <div class="tool-card-header">
+                <div class="tool-card-category-box">
+                  <h6 class="tool-card-category-title"><i data-lucide="folder" class="tool-card-category-icon"></i>Utilities<h6/>
+                </div>
+                <div class="tool-card-title">
+                  <span class="tool-icon"><i data-lucide="palette"></i></span>
+                  <h4>Color Picker</h4>
+                </div>
+              </div>
+              <p class="tool-card-description">
+                Pick colors and convert between HEX, RGB, HSL formats with
+                live preview and palette generation.
+              </p>
+              <div class="tool-card-footer">
+                <div class="tool-tags">
+                  <span class="badge badge-info">Color</span>
+                  <span class="badge badge-info">Design</span>
+                </div>
+                <a
+                  href="api-tester.html"
+                  class="open-tool-btn btn btn-primary btn-sm"
+                  >Open Tool 🔓</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Empty State (hidden by default, shown when no results) -->
+          <div class="tools-empty" style="display: none">
+            <div class="empty-state">
+              <span class="empty-icon">🔍</span>
+              <h3 class="empty-title">No tools found</h3>
+              <p class="empty-description">
+                Try adjusting your search or filter criteria
+              </p>
+              <button class="btn btn-primary" onclick="resetFilters()">
+                Clear Filters
+              </button>
+            </div>
+          </div>
+
+          </div>
+        </section>
+
+        <!-- TODO delete or style! -->
+        <!-- Stats Section -->
+        <!-- <section class="tools-stats">
+          <div class="container">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-icon">🛠️</span>
+                <span class="stat-number">8</span>
+                <span class="stat-label">Total Tools</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-icon">⚡</span>
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Client-Side</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-icon">🔒</span>
+                <span class="stat-number">Private</span>
+                <span class="stat-label">Your Data</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-icon">🚀</span>
+                <span class="stat-number">Fast</span>
+                <span class="stat-label">Performance</span>
+              </div>
+            </div>
+          </div>
+        </section> -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Footer Main Content -->
+        <div class="footer-content">
+          <!-- Brand Section -->
+          <div class="footer-section footer-brand">
+            <h5>DRY DEV</h5>
+            <p>
+              Project created as part of Web Design Course 2025. All tools run
+              100% client-side for maximum privacy and performance.
+            </p>
+          </div>
+
+          <!-- Tools Links -->
+          <div class="footer-section">
+            <h5>Tools</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="src/pages/api-tester.html" class="link-animated"
+                  >API Tester</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/json-formatter.html" class="link-animated"
+                  >JSON Formatter</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/data-generator.html" class="link-animated"
+                  >Test Data Generator</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/base64.html" class="link-animated"
+                  >Base64 Encoder/Decoder</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/timestamp.html" class="link-animated"
+                  >Unix Timestamp</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Info Links -->
+          <div class="footer-section">
+            <h5>Info</h5>
+            <ul class="footer-links">
+              <li><a href="#hero" class="link-animated">About Project</a></li>
+              <li><a href="#tools" class="link-animated">All Tools</a></li>
+              <li><a href="#features" class="link-animated">Features</a></li>
+              <li>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link-animated"
+                >
+                  GitHub Repository
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2025 Dry Dev | Developer Tools Dashboard. Educational
+            Project.
+          </p>
+
+          <div class="footer-social">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              GH
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              IN
+            </a>
+            <a href="mailto:contact@drydev.com" aria-label="Email"> @ </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

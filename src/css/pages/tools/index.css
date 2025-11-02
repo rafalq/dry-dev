@@ -1,0 +1,156 @@
+.tools-section {
+  display: flex;
+  justify-content: center;
+}
+
+/* ========================================
+   FILTER CHIPS STYLES
+   ======================================== */
+
+/* Container dla chipów */
+.filter-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+/* Base Filter Chip Styles */
+.filter-chip {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+
+  /* Typography */
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+
+  /* Appearance */
+  background: var(--color-surface, #ffffff);
+  color: var(--color-text-secondary, #64748b);
+  border: 2px solid var(--color-border, #e2e8f0);
+  border-radius: 2rem;
+
+  /* Effects */
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  /* Reset button defaults */
+  outline: none;
+  text-decoration: none;
+}
+
+/* Hover State */
+.filter-chip:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-gray-50);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Active State */
+.filter-chip.active {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  border-color: var(--color-primary);
+  color: var(--color-gray-50);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-md);
+}
+
+/* Active Hover State */
+.filter-chip.active:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Focus State (accessibility) */
+.filter-chip:focus-visible {
+  outline: 3px solid var(--color-primary-light);
+  outline-offset: 2px;
+}
+
+/* Pressed State */
+.filter-chip:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Disabled State */
+.filter-chip:disabled {
+  background: var(--color-gray-50);
+  color: var(----color-dark-text-secondary);
+  border-color: var(--border-secondary);
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.filter-chip:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Emoji styling (jeśli używasz emoji jako ikon) */
+.filter-chip span {
+  font-size: var(--font-size-base);
+  line-height: 1;
+}
+
+/* ========================================
+   TOOL CARDS STYLES
+   ======================================== */
+
+.tool-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.tool-card-category-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tool-card-category-title {
+  margin-left: auto;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: flex-start;
+}
+
+.tool-card-category-icon {
+  height: var(--space-3);
+}
+
+.tool-card-title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.tool-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.open-tool-btn {
+  align-self: flex-end;
+}
