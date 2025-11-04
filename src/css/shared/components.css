@@ -272,6 +272,7 @@
 .badge-info {
   background: var(--color-info-light);
   color: var(--color-info-dark);
+  font-size: var(--font-size-xs);
 }
 
 .badge-dot {
@@ -287,10 +288,20 @@
   margin-bottom: var(--space-12);
 }
 .section-title {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  align-items: center;
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-gray-900);
   margin-bottom: var(--space-4);
+}
+
+.section-title-icon {
+  height: var(--font-size-3xl);
+  width: auto;
+  color: var(--color-gray-400);
 }
 
 .section-description {

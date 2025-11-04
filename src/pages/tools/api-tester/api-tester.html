@@ -91,7 +91,10 @@
         <!-- Page Header -->
         <section class="section-header">
           <header>
-            <h1 class="section-title">API Tester</h1>
+            <h1 class="section-title">
+              <i data-lucide="terminal" class="section-title-icon"></i
+              ><span>API Tester</span>
+            </h1>
             <p class="section-description">
               Test REST APIs with custom headers, query parameters, and request
               body. View formatted responses in real-time.
@@ -180,16 +183,18 @@
 
                     <div class="param-row">
                       <input
+                        name="authorization"
                         type="text"
                         class="input input-sm"
                         value="Authorization"
                         placeholder="Header name"
                       />
                       <input
+                        name="bearer-token"
                         type="text"
                         class="input input-sm"
-                        value="Bearer token______"
-                        placeholder="Header value"
+                        value=""
+                        placeholder="Bearer token value"
                       />
                       <button
                         class="param-remove-btn"
@@ -204,15 +209,17 @@
 
                     <div class="param-row">
                       <input
+                        name="custom-header"
                         type="text"
                         class="input input-sm"
                         value="Custom-Header"
                         placeholder="Header name"
                       />
                       <input
+                        name="custom-header-value"
                         type="text"
                         class="input input-sm"
-                        value="______________"
+                        value=""
                         placeholder="Header value"
                       />
                       <button
