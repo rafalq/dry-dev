@@ -122,8 +122,8 @@
 /* Toast close button */
 .toast-close {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,18 +132,21 @@
   cursor: pointer;
   transition: all 0.2s ease;
   padding: 0;
+  background-color: transparent;
+  color: var(--color-error);
 }
 
 .toast-close:hover {
   color: var(--color-error-dark);
 }
 
-.toast-close i {
-  width: 16px;
-  height: 16px;
-}
+/* 
+*
 
-/* Toast type variants */
+Toast type variants 
+
+*
+*/
 
 /* Success toast */
 .toast-success {

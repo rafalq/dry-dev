@@ -65,6 +65,10 @@ const ToastSystem = {
     // Add to container
     this.container.appendChild(toast.element);
 
+    if (window.lucide) {
+      setTimeout(() => window.lucide.createIcons(), 10);
+    }
+
     // Add to array
     this.toasts.push(toast);
 
@@ -149,20 +153,20 @@ const ToastSystem = {
     element.className = `toast toast-${toast.type}`;
     element.setAttribute("data-toast-id", toast.id);
 
-    const iconHtml =
-      toast.type === "loading"
-        ? `<i data-lucide="${toast.icon}" class="toast-icon toast-icon-spin"></i>`
-        : `<i data-lucide="${toast.icon}" class="toast-icon"></i>`;
+    const icon = document.createElement("i");
+    icon.setAttribute("data-lucide", toast.icon);
+    icon.className =
+      toast.type === "loading" ? "toast-icon toast-icon-spin" : "toast-icon";
 
-    element.innerHTML = `
-      ${iconHtml}
-      <span class="toast-message">${this.escapeHtml(toast.message)}</span>
-      ${
-        toast.dismissible
-          ? '<button class="toast-close" aria-label="Close"><i data-lucide="x"></i></button>'
-          : ""
-      }
-    `;
+    const message = document.createElement("span");
+    message.className = "toast-message";
+    message.textContent = toast.message;
+
+    const closeBtn = toast.dismissible ? this.createCloseButton(toast) : null;
+
+    element.appendChild(icon);
+    element.appendChild(message);
+    if (closeBtn) element.appendChild(closeBtn);
 
     // Initialize Lucide icons
     if (window.lucide) {
@@ -190,6 +194,24 @@ const ToastSystem = {
     }
 
     return element;
+  },
+
+  // Helper dla close button
+  createCloseButton(toast) {
+    const btn = document.createElement("button");
+    btn.className = "toast-close";
+    btn.setAttribute("aria-label", "Close");
+
+    const icon = document.createElement("i");
+    icon.setAttribute("data-lucide", "x");
+    btn.appendChild(icon);
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      this.remove(toast.id);
+    });
+
+    return btn;
   },
 
   /**

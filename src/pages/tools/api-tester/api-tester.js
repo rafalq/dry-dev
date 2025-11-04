@@ -2114,7 +2114,7 @@ function validateJSON() {
 
   try {
     JSON.parse(textarea.value);
-    ToastSystem.success("Valid JSON ✓");
+    ToastSystem.success("Valid JSON");
   } catch (error) {
     ToastSystem.error("Invalid JSON: " + error.message);
   }
