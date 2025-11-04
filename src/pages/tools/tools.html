@@ -14,12 +14,15 @@
     />
 
     <title>Dry Dev | Tools for Web Developers</title>
+
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
     <link rel="stylesheet" href="../../css/main.css" />
-    <link rel="stylesheet" href="../../css/pages/tools/index.css" />
+    <link rel="stylesheet" href="tools.css" />
+    
     <script type="module" src="../../js/main.js" defer></script>
-    <script type="module" src="../../js/tools/search.js" defer></script>
+    <script type="module" src="search.js" defer></script>
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -27,7 +30,7 @@
       <nav role="navigation" aria-label="Main navigation" class="main-nav">
         <!-- Logo -->
         <div>
-          <a href="index.html" class="logo">
+          <a href="../../../index.html" class="logo">
             <strong
               ><span class="logo-brackets">&lt;</span>DRY<span
                 class="logo-slash"
@@ -41,12 +44,12 @@
         <div id="navMenu">
           <ul class="main-nav-links">
             <li>
-              <a href="index.html" class="link-animated" aria-current="page"
+              <a href="../../../index.html" class="link-animated" aria-current="page"
                 >Home</a
               >
             </li>
             <li>
-              <a href="src/pages/tools/index.html" class="link-animated"
+              <a href="src/pages/tools/tools.html" class="link-animated"
                 >Tools</a
               >
             </li>
@@ -81,51 +84,53 @@
       <div class="page-main">
         <!-- Page Header -->
         <section class="section-header">
-          <div class="row gy-4">
-            <div>
-              <h1 class="section-title">Developer Tools</h1>
-              <p class="section-description">
-                Powerful utilities to streamline your development workflow
-              </p>
-            </div>
-            <!-- Search Bar -->
-            <div class="row gy-3">
-              <div class="tools-search col-12 col-md-8 mx-auto">
-                <input
-                  type="search"
-                  id="toolSearch"
-                  class="input input-lg"
-                  placeholder="Search tools... (e.g., JSON, API, encode)"
-                  aria-label="Search tools"
-                />
+          <header>
+            <div class="row gy-4">
+              <div>
+                <h1 class="section-title">Developer Tools</h1>
+                <p class="section-description">
+                  Powerful utilities to streamline your development workflow
+                </p>
               </div>
+              <!-- Search Bar -->
+              <div class="row gy-3">
+                <div class="tools-search col-12 col-md-8 mx-auto">
+                  <input
+                    type="search"
+                    id="toolSearch"
+                    class="input input-lg"
+                    placeholder="Search tools... (e.g., JSON, API, encode)"
+                    aria-label="Search tools"
+                  />
+                </div>
 
-              <!-- Filter Chips -->
-              <div class="filter-chips-container col-12 mx-auto">
-                <button class="filter-chip active" data-category="all">
-                  All Tools
-                </button>
-                <button class="filter-chip" data-category="api">
-                  🔌 API Tools
-                </button>
-                <button class="filter-chip" data-category="formatters">
-                  📋 Formatters
-                </button>
-                <button class="filter-chip" data-category="generators">
-                  🎲 Generators
-                </button>
-                <button class="filter-chip" data-category="encoders">
-                  🔐 Encoders
-                </button>
-                <button class="filter-chip" data-category="converters">
-                  ♻️ Converters
-                </button>
-                <button class="filter-chip" data-category="utilities">
-                  ⚙️ Utilities
-                </button>
+                <!-- Filter Chips -->
+                <div class="filter-chips-container col-12 mx-auto">
+                  <button class="filter-chip active" data-category="all">
+                    All Tools
+                  </button>
+                  <button class="filter-chip" data-category="api">
+                    🔌 API Tools
+                  </button>
+                  <button class="filter-chip" data-category="formatters">
+                    📋 Formatters
+                  </button>
+                  <button class="filter-chip" data-category="generators">
+                    🎲 Generators
+                  </button>
+                  <button class="filter-chip" data-category="encoders">
+                    🔐 Encoders
+                  </button>
+                  <button class="filter-chip" data-category="converters">
+                    ♻️ Converters
+                  </button>
+                  <button class="filter-chip" data-category="utilities">
+                    ⚙️ Utilities
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          </header>
         </section>
 
         <!-- Tools Grid -->
@@ -155,7 +160,7 @@
                   <span class="badge badge-info">HTTP</span>
                 </div>
                 <a
-                  href="api-tester.html"
+                  href="./api-tester/api-tester.html"
                   class="tool-button open-tool-btn btn-sm"
                   >Launch Tool</a
                 >

@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Test REST APIs with custom headers, query parameters, and request body. View formatted responses."
+    />
+    <meta name="author" content="Rafal Kruszewski" />
+    <meta
+      name="keywords"
+      content="developer tools, api tester, web development"
+    />
+
+    <title>Dry Dev | Tools for Web Developers</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg" />
+
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <link rel="stylesheet" href="../../../css/shared/modal.css" />
+    <link rel="stylesheet" href="../../../css/shared/toast.css" />
+    <link rel="stylesheet" href="api-tester.css" />
+
+    <script type="module" src="../../../js/main.js" defer></script>
+    <script src="../../../js/shared/toast.js" defer></script>
+    <script src="../../../js/shared/modal.js" defer></script>
+    <script src="api-tester.js" defer></script>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="main-header">
+      <nav role="navigation" aria-label="Main navigation" class="main-nav">
+        <!-- Logo -->
+        <div>
+          <a href="../../../../index.html" class="logo">
+            <strong
+              ><span class="logo-brackets">&lt;</span>DRY<span
+                class="logo-slash"
+                >/</span
+              >DEV<span class="logo-brackets">&gt;</span></strong
+            >
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div id="navMenu">
+          <ul class="main-nav-links">
+            <li>
+              <a
+                href="../../../js/main.js"
+                class="link-animated"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="../tools.html" class="link-animated">Tools</a>
+            </li>
+            <li>
+              <a href="src/pages/about.html" class="link-animated">About</a>
+            </li>
+            <li>
+              <a href="src/pages/docs.html" class="link-animated">Docs</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+
+    <main class="container">
+      <div class="page-main">
+        <!-- Page Header -->
+        <section class="section-header">
+          <header>
+            <h1 class="section-title">API Tester</h1>
+            <p class="section-description">
+              Test REST APIs with custom headers, query parameters, and request
+              body. View formatted responses in real-time.
+            </p>
+          </header>
+        </section>
+        <section>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <!-- Request Configuration Section -->
+                <section class="request-config">
+                  <h2 class="config-section-title">Request Configuration</h2>
+
+                  <!-- Method Selector -->
+                  <div class="method-selector">
+                    <button class="method-btn active" data-method="GET">
+                      GET
+                    </button>
+                    <button class="method-btn" data-method="POST">POST</button>
+                    <button class="method-btn" data-method="PUT">PUT</button>
+                    <button class="method-btn" data-method="DELETE">
+                      DELETE
+                    </button>
+                  </div>
+
+                  <!-- URL Input -->
+                  <div class="url-input-group">
+                    <input
+                      type="text"
+                      class="input"
+                      placeholder="https://api.example.com/__________"
+                      aria-label="API URL"
+                    />
+                    <button
+                      class="quick-fill-btn"
+                      aria-label="Quick fill with JSONPlaceholder"
+                    >
+                      Quick fill: JSONPlaceholder ▼
+                    </button>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Headers Section -->
+              <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <section class="params-section">
+                  <div class="params-section-header">
+                    <h3 class="params-section-title">Headers</h3>
+                  </div>
+
+                  <div class="params-table">
+                    <!-- Table Header -->
+                    <div class="params-table-header">
+                      <span>Key</span>
+                      <span>Value</span>
+                      <span></span>
+                    </div>
+
+                    <!-- Header Rows -->
+                    <div class="param-row">
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="Content-Type"
+                        placeholder="Header name"
+                      />
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="application/json"
+                        placeholder="Header value"
+                      />
+                      <button
+                        class="param-remove-btn"
+                        aria-label="Remove header"
+                      >
+                        <i
+                          data-lucide="x"
+                          style="width: 16px; height: 16px"
+                        ></i>
+                      </button>
+                    </div>
+
+                    <div class="param-row">
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="Authorization"
+                        placeholder="Header name"
+                      />
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="Bearer token______"
+                        placeholder="Header value"
+                      />
+                      <button
+                        class="param-remove-btn"
+                        aria-label="Remove header"
+                      >
+                        <i
+                          data-lucide="x"
+                          style="width: 16px; height: 16px"
+                        ></i>
+                      </button>
+                    </div>
+
+                    <div class="param-row">
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="Custom-Header"
+                        placeholder="Header name"
+                      />
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="______________"
+                        placeholder="Header value"
+                      />
+                      <button
+                        class="param-remove-btn"
+                        aria-label="Remove header"
+                      >
+                        <i
+                          data-lucide="x"
+                          style="width: 16px; height: 16px"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button class="add-param-btn">
+                    <i data-lucide="plus" style="width: 16px; height: 16px"></i>
+                    Add Header
+                  </button>
+                </section>
+              </div>
+
+              <!-- Query Parameters Section -->
+              <div class="col-12 col-lg-6">
+                <section class="params-section">
+                  <div class="params-section-header">
+                    <h3 class="params-section-title">Query Parameters</h3>
+                  </div>
+
+                  <div class="params-table">
+                    <!-- Table Header -->
+                    <div class="params-table-header">
+                      <span>Key</span>
+                      <span>Value</span>
+                      <span></span>
+                    </div>
+
+                    <!-- Parameter Rows -->
+                    <div class="param-row">
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="page"
+                        placeholder="Parameter name"
+                      />
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="1"
+                        placeholder="Parameter value"
+                      />
+                      <button
+                        class="param-remove-btn"
+                        aria-label="Remove parameter"
+                      >
+                        <i
+                          data-lucide="x"
+                          style="width: 16px; height: 16px"
+                        ></i>
+                      </button>
+                    </div>
+
+                    <div class="param-row">
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="limit"
+                        placeholder="Parameter name"
+                      />
+                      <input
+                        type="text"
+                        class="input input-sm"
+                        value="10"
+                        placeholder="Parameter value"
+                      />
+                      <button
+                        class="param-remove-btn"
+                        aria-label="Remove parameter"
+                      >
+                        <i
+                          data-lucide="x"
+                          style="width: 16px; height: 16px"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button class="add-param-btn">
+                    <i data-lucide="plus" style="width: 16px; height: 16px"></i>
+                    Add Parameter
+                  </button>
+                </section>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <!-- Request Body Section -->
+                <section class="request-body-section">
+                  <div class="request-body-header">
+                    <h3 class="request-body-title">Request Body (JSON)</h3>
+                    <div class="body-actions">
+                      <button class="btn btn-secondary btn-sm">
+                        Format JSON
+                      </button>
+                      <button class="btn btn-secondary btn-sm">Validate</button>
+                    </div>
+                  </div>
+
+                  <!-- Code Editor -->
+                  <div class="code-editor">
+                    <div class="code-editor-container">
+                      <div class="line-numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                      </div>
+                      <textarea
+                        class="code-textarea"
+                        spellcheck="false"
+                        aria-label="Request body JSON"
+                      >
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "age": 30
+}</textarea
+                      >
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Send Request Button -->
+                <div class="send-request-section">
+                  <button class="send-request-btn">
+                    <i data-lucide="send" style="width: 20px; height: 20px"></i>
+                    Send Request
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Footer Main Content -->
+        <div class="footer-content">
+          <!-- Brand Section -->
+          <div class="footer-section footer-brand">
+            <h5>DRY DEV</h5>
+            <p>
+              Project created as part of Web Design Course 2025. All tools run
+              100% client-side for maximum privacy and performance.
+            </p>
+          </div>
+
+          <!-- Tools Links -->
+          <div class="footer-section">
+            <h5>Tools</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="src/pages/api-tester.html" class="link-animated"
+                  >API Tester</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/json-formatter.html" class="link-animated"
+                  >JSON Formatter</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/data-generator.html" class="link-animated"
+                  >Test Data Generator</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/base64.html" class="link-animated"
+                  >Base64 Encoder/Decoder</a
+                >
+              </li>
+              <li>
+                <a href="src/pages/timestamp.html" class="link-animated"
+                  >Unix Timestamp</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Info Links -->
+          <div class="footer-section">
+            <h5>Info</h5>
+            <ul class="footer-links">
+              <li><a href="#hero" class="link-animated">About Project</a></li>
+              <li><a href="#tools" class="link-animated">All Tools</a></li>
+              <li><a href="#features" class="link-animated">Features</a></li>
+              <li>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link-animated"
+                >
+                  GitHub Repository
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2025 Dry Dev | Developer Tools Dashboard. Educational
+            Project.
+          </p>
+
+          <div class="footer-social">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              GH
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              IN
+            </a>
+            <a href="mailto:contact@drydev.com" aria-label="Email"> @ </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

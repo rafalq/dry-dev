@@ -16,7 +16,7 @@
     <title>Dry Dev | Tools for Web Developers</title>
     <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
     <link rel="stylesheet" href="src/css/main.css" />
-    <link rel="stylesheet" href="src/css/pages/home/index.css" />
+    <link rel="stylesheet" href="src/pages/home/index.css" />
     <script type="module" src="src/js/main.js" defer></script>
   </head>
   <body>
@@ -25,7 +25,7 @@
       <nav role="navigation" aria-label="Main navigation" class="main-nav">
         <!-- Logo -->
         <div>
-          <a href="index.html" class="logo">
+          <a href="/" class="logo">
             <strong
               ><span class="logo-brackets">&lt;</span>DRY<span
                 class="logo-slash"
@@ -39,12 +39,10 @@
         <div id="navMenu">
           <ul class="main-nav-links">
             <li>
-              <a href="index.html" class="link-animated" aria-current="page"
-                >Home</a
-              >
+              <a href="/" class="link-animated" aria-current="page">Home</a>
             </li>
             <li>
-              <a href="src/pages/tools/index.html" class="link-animated"
+              <a href="src/pages/tools/tools.html" class="link-animated"
                 >Tools</a
               >
             </li>
@@ -195,7 +193,10 @@
               <li>Request history tracking</li>
               <li>Response syntax highlighting</li>
             </ul>
-            <a href="src/pages/api-tester.html" class="tool-button">
+            <a
+              href="src/pages/tools/api-tester/api-tester.html"
+              class="tool-button"
+            >
               Launch Tool
             </a>
           </div>
@@ -292,8 +293,8 @@
           </div>
         </div>
       </section>
+
       <!-- RECENTLY USED -->
-      <!-- Recently Used Section -->
       <section class="recently-used-section">
         <div class="section-header">
           <div class="badge badge-info tools-badge">
@@ -416,7 +417,9 @@
             <h5>Tools</h5>
             <ul class="footer-links">
               <li>
-                <a href="src/pages/api-tester.html" class="link-animated"
+                <a
+                  href="src/pages/tools/api-tester/api-tester.html"
+                  class="link-animated"
                   >API Tester</a
                 >
               </li>
