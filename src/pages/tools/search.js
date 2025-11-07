@@ -337,7 +337,7 @@ function saveToSearchHistory(query) {
   if (!query || query.length < SEARCH_CONFIG.minSearchLength) return;
 
   // Get history from localStorage
-  let history = JSON.parse(localStorage.getItem("searchHistory") || "[]");
+  let history = JSON.parse(localStorage.getItem("search_history") || "[]");
 
   // Remove duplicates
   history = history.filter(
@@ -351,7 +351,7 @@ function saveToSearchHistory(query) {
   history = history.slice(0, SEARCH_CONFIG.maxHistoryItems);
 
   // Save in localStorage
-  localStorage.setItem("searchHistory", JSON.stringify(history));
+  localStorage.setItem("search_history", JSON.stringify(history));
 
   searchState.searchHistory = history;
 }
@@ -361,14 +361,14 @@ function saveToSearchHistory(query) {
  * @returns {Array<string>}
  */
 function getSearchHistory() {
-  return JSON.parse(localStorage.getItem("searchHistory") || "[]");
+  return JSON.parse(localStorage.getItem("search_history") || "[]");
 }
 
 /**
  * Clear search history
  */
 function clearSearchHistory() {
-  localStorage.removeItem("searchHistory");
+  localStorage.removeItem("search_history");
   searchState.searchHistory = [];
 }
 
@@ -420,7 +420,7 @@ function initFilterChips() {
   });
 
   // Restore last selected filter from localStorage
-  const savedCategory = localStorage.getItem("selectedCategory");
+  const savedCategory = localStorage.getItem("selected_category");
   if (savedCategory && savedCategory !== "all") {
     const savedChip = document.querySelector(
       `.filter-chip[data-category="${savedCategory}"]`,
@@ -454,7 +454,7 @@ function handleFilterChipClick(event) {
   searchState.activeCategory = category;
 
   // Save to localStorage
-  localStorage.setItem("selectedCategory", category);
+  localStorage.setItem("selected_category", category);
 
   // Apply filter
   filterToolsByCategory(category);

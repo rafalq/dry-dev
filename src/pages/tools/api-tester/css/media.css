@@ -1,0 +1,47 @@
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .method-selector {
+    flex-direction: column;
+  }
+
+  .method-btn {
+    width: 100%;
+  }
+
+  .url-input-group {
+    flex-direction: column;
+  }
+
+  .params-table-header,
+  .param-row {
+    grid-template-columns: 1fr;
+  }
+
+  .param-row .input:last-child {
+    grid-column: 1;
+  }
+
+  .param-remove-btn {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 576px) {
+  .api-tester-container {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .request-config,
+  .params-section,
+  .request-body-section {
+    padding: var(--space-4);
+  }
+
+  .code-editor-container {
+    grid-template-columns: 1fr;
+  }
+
+  .line-numbers {
+    display: none;
+  }
+}

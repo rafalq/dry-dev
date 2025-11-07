@@ -1,0 +1,48 @@
+@media (prefers-color-scheme: dark) {
+  .save-request-form {
+    background-color: var(--color-dark-bg-tertiary);
+  }
+
+  .form-label {
+    color: var(--color-dark-text, #e2e8f0);
+  }
+
+  .form-text {
+    color: var(--color-dark-text-secondary, #94a3b8);
+  }
+
+  .radio-label:hover {
+    background: var(--color-dark-bg-tertiary, #334155);
+  }
+
+  .radio-label span {
+    color: var(--color-dark-text-secondary, #94a3b8);
+  }
+
+  .radio-label input[type="radio"]:checked + span {
+    color: var(--color-dark-text, #e2e8f0);
+  }
+}
+
+[data-theme="dark"] .form-label {
+  color: var(--color-dark-text, #e2e8f0);
+}
+
+[data-theme="dark"] .form-text {
+  color: var(--color-dark-text-secondary, #94a3b8);
+}
+
+[data-theme="dark"] .radio-label:hover {
+  background: var(--color-dark-bg-tertiary, #334155);
+}
+
+[data-theme="dark"] .radio-label span {
+  color: var(--color-dark-text-secondary, #94a3b8);
+}
+
+[data-theme="dark"] .radio-label input[type="radio"]:checked + span {
+  color: var(--color-dark-text, #e2e8f0);
+}
+
+
+

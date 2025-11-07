@@ -1,0 +1,37 @@
+@import "request-config.css";
+@import "headers-and-params.css";
+@import "request-body.css";
+@import "send-request-btn.css";
+@import "save-request.css";
+@import "media.css";
+/* TODO uncomment when using dark mode */
+/* @import "dark-mode.css"; */
+
+/* Main container */
+.api-tester-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+/* Page header */
+.api-tester-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.api-tester-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.api-tester-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+};
