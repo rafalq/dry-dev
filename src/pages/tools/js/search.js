@@ -5,8 +5,6 @@
  * ========================================
  */
 
-console.log("search.js");
-
 // ===== CONFIGURATION =====
 const SEARCH_CONFIG = {
   debounceDelay: 300, // ms - waiting time after the last key press
